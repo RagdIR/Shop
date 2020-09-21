@@ -6,7 +6,7 @@
     "name": "\u041b\u043e\u0434\u043a\u0430 \u0440\u0435\u0437\u0438\u043d\u043e\u0432\u0430\u044f",
     "description": "\u041e\u0442\u043b\u0438\u0447\u043d\u0430\u044f \u043b\u043e\u0434\u043a\u0430 \u0434\u043b\u044f \u0441\u043f\u043b\u0430\u0432\u0430 \u043f\u043e \u0440\u0435\u043a\u0435 \u0410\u043b\u0430-\u0410\u0440\u0447\u0435!",
     "category": "other",
-    "amount": 1,
+    "amount": 0,
     "price": "100.00"
   }
 },
@@ -17,7 +17,7 @@
     "name": "\u041c\u0438\u043d\u0435\u0440\u0430\u043b\u044c\u043d\u0430\u044f \u0432\u043e\u0434\u0430",
     "description": "\u0412\u043a\u0443\u0441\u043d\u0430\u044f, \u0445\u043e\u043b\u043e\u0434\u043d\u0430\u044f, \u0433\u043e\u0440\u043d\u0430\u044f \u0432\u043e\u0434\u0430. \"\u041b\u0435\u0433\u0435\u043d\u0434\u0430\"!",
     "category": "food",
-    "amount": 100,
+    "amount": 99,
     "price": "20.00"
   }
 },
@@ -28,7 +28,7 @@
     "name": "\u041b\u0435\u043f\u0451\u0448\u043a\u0430 \u0442\u0430\u043d\u0434\u044b\u0440\u043d\u0430\u044f",
     "description": "\u0412\u043a\u0443\u0441\u043d\u0430\u044f, \u0433\u043e\u0440\u044f\u0447\u0430\u044f \u043b\u0435\u043f\u0451\u0448\u043a\u0430.",
     "category": "food",
-    "amount": 10,
+    "amount": 9,
     "price": "22.00"
   }
 },
@@ -39,7 +39,7 @@
     "name": "\u041f\u0430\u0440\u043e\u0432\u043e\u0437\u0438\u043a \u0418\u041a\u0415\u042f",
     "description": "\u041d\u0430\u0431\u043e\u0440 \u0438\u0437 3 \u0432\u0430\u0433\u043e\u043d\u043e\u0432 \u0438 \u0434\u0435\u0440\u0435\u0432\u044f\u043d\u043d\u043e\u0439 \u0436\u0435\u043b\u0435\u0437\u043d\u043e\u0439 \u0434\u043e\u0440\u043e\u0433\u0438.",
     "category": "toys",
-    "amount": 2,
+    "amount": 1,
     "price": "1100.00"
   }
 },
@@ -72,7 +72,7 @@
     "name": "\u041e\u0440\u0431\u0438\u0442 \u0431\u0435\u0437 \u0441\u0430\u0445\u0430\u0440\u0430",
     "description": "\u0421\u0430\u043c\u0430 \u0436\u0435\u0432\u0430\u043b\u0430 \u0434\u0430 \u0430\u0445\u0430\u043b\u0430",
     "category": "food",
-    "amount": 1000,
+    "amount": 990,
     "price": "5.00"
   }
 },
@@ -83,7 +83,7 @@
     "name": "\u0414\u0436\u0443\u0441\u0438 \u0444\u0440\u0443\u0442",
     "description": "\u041e\u0442 \u043d\u0435\u0433\u043e \u043c\u0443\u0445\u0438 \u043c\u0440\u0443\u0442,\r\n\u0410 \u0442\u0432\u043e\u0439 \u043e\u0440\u0431\u0438\u0442 \u0432\u0441\u0435 \u0437\u0443\u0431\u044b \u0441\u0433\u043e\u0440\u0431\u0438\u0442!",
     "category": "food",
-    "amount": 1000,
+    "amount": 911,
     "price": "5.00"
   }
 },
@@ -94,7 +94,7 @@
     "name": "\u0420\u0443\u043b\u043e\u043d \u041f\u0430\u043a\u0435\u0442\u043e\u0432",
     "description": "100 \u0448\u0442.",
     "category": "household",
-    "amount": 50,
+    "amount": 49,
     "price": "100.00"
   }
 },
@@ -121,11 +121,371 @@
   }
 },
 {
+  "model": "webapp.cart",
+  "pk": 43,
+  "fields": {
+    "product": 9,
+    "qty": 12,
+    "session": "f90xvp5hzdnpn1a86dquc9iefnh4egn9"
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 1,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 5
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 2,
+  "fields": {
+    "product": 2,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 3,
+  "fields": {
+    "product": 10,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 4,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 5,
+  "fields": {
+    "product": 2,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 6,
+  "fields": {
+    "product": 10,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 7,
+  "fields": {
+    "product": 1,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 8,
+  "fields": {
+    "product": 4,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 9,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 10,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 11,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 12,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 13,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 14,
+  "fields": {
+    "product": 3,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 15,
+  "fields": {
+    "product": 3,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 16,
+  "fields": {
+    "product": 3,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 17,
+  "fields": {
+    "product": 3,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 18,
+  "fields": {
+    "product": 3,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 19,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 20,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 21,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 22,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 23,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 24,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 25,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 26,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 27,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 28,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 29,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 30,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 31,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 32,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 33,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 34,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 35,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 36,
+  "fields": {
+    "product": 9,
+    "order": 1,
+    "qty": 4
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 37,
+  "fields": {
+    "product": 9,
+    "order": 2,
+    "qty": 3
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 38,
+  "fields": {
+    "product": 8,
+    "order": 3,
+    "qty": 10
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 39,
+  "fields": {
+    "product": 9,
+    "order": 4,
+    "qty": 81
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$150000$NAMADa9UizSE$/K3WatvdPcI5yo8EI9+rjgUzEEadx6QsTyQ/JqGHh+c=",
-    "last_login": "2020-08-27T14:34:34.061Z",
+    "last_login": "2020-09-21T06:52:17.891Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
@@ -136,6 +496,68 @@
     "date_joined": "2020-07-30T14:07:00.163Z",
     "groups": [],
     "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$4YLY1LYNmqKn$sDp+wF/2Y95Y0YZtiLsjo0KWj8brPdY8dOGmXkKxrcA=",
+    "last_login": "2020-09-21T06:38:50.218Z",
+    "is_superuser": false,
+    "username": "RagdIR",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-09-21T06:38:50.010Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 1,
+  "fields": {
+    "name": "Fedor Strogov",
+    "phone": "0555642390",
+    "address": "Vitebsky str., 2",
+    "created_at": "2020-09-21T10:08:33.334Z",
+    "user": null
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 2,
+  "fields": {
+    "name": "Fedor Strogov",
+    "phone": "0555642390",
+    "address": "Vitebsky str., 2",
+    "created_at": "2020-09-21T10:17:08.548Z",
+    "user": null
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 3,
+  "fields": {
+    "name": "Fedor Strogov",
+    "phone": "0555642390",
+    "address": "Vitebsky str., 2",
+    "created_at": "2020-09-21T10:17:56.385Z",
+    "user": 1
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 4,
+  "fields": {
+    "name": "Fedor Strogov",
+    "phone": "0555642390",
+    "address": "Vitebsky str., 2",
+    "created_at": "2020-09-21T10:19:23.351Z",
+    "user": 1
   }
 }
 ]

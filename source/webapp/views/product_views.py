@@ -1,4 +1,5 @@
-from django.views.generic import DetailView, CreateView, UpdateView, DeleteView 
+from django.contrib.auth.mixins import PermissionRequiredMixin, UserPassesTestMixin
+from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 
 from .base_views import SearchView
@@ -15,6 +16,8 @@ class IndexView(SearchView):
     paginate_by = 5
     context_object_name = 'products'
 
+
+
     def get_queryset(self):
         return super().get_queryset().filter(amount__gt=0)
 
@@ -29,25 +32,39 @@ class ProductView(DetailView):
     #     return super().get_queryset().filter(amount__gt=0)
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(UserPassesTestMixin, CreateView):
     model = Product
     form_class = ProductForm
     template_name = 'product/product_create.html'
+    # permission_required = 'webapp.create_product'
+    #
+    # def has_permission(self):
+    #     project = self.get_object()
+    #     return super().has_permission() and self.request.user in project.user.all()
+
+    def test_func(self):
+        return self.request.user.has_perm('webapp.create_product')
 
     def get_success_url(self):
         return reverse('webapp:product_view', kwargs={'pk': self.object.pk})
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(PermissionRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
     template_name = 'product/product_update.html'
 
+    def test_func(self):
+        return self.request.user.has_perm('webapp.update_product')
+
     def get_success_url(self):
         return reverse('webapp:product_view', kwargs={'pk': self.object.pk})
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(PermissionRequiredMixin, DeleteView):
     model = Product
     template_name = 'product/product_delete.html'
     success_url = reverse_lazy('webapp:index')
+
+    def test_func(self):
+        return self.request.user.has_perm('webapp.delete_product')

@@ -15,11 +15,10 @@ class ProductForm(forms.ModelForm):
 class CartAddForm(forms.ModelForm):
     class Meta:
         model = Cart
-        # fields = []
-        fields = ['qty']  # бонус
+        fields = ['qty']
 
 
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        exclude = ['products']
+        exclude = ['products', 'user']

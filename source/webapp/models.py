@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator
 from django.db.models import Sum, F, ExpressionWrapper as E
+from django.contrib.auth.models import User
 
 
 DEFAULT_CATEGORY = 'other'
@@ -33,6 +34,7 @@ class Cart(models.Model):
     product = models.ForeignKey('webapp.Product', on_delete=models.CASCADE,
                                 verbose_name='Товар', related_name='in_cart')
     qty = models.IntegerField(verbose_name='Количество', default=1, validators=[MinValueValidator(1)])
+    session = models.ForeignKey('sessions.Session', on_delete=models.CASCADE, related_name='cart', null=True)
 
     def __str__(self):
         return f'{self.product.name} - {self.qty}'
@@ -59,11 +61,10 @@ class Cart(models.Model):
     #     return total
 
     @classmethod
-    def get_cart_total(cls, ids=None):
-        # запрос, так быстрее
+    def get_cart_total(cls, session_key=None):
         cart_products = cls.get_with_total()
-        if ids is not None:
-            cart_products = cart_products.filter(pk__in=ids)
+        if session_key:
+            cart_products = cart_products.filter(session_id=session_key)
         total = cart_products.aggregate(cart_total=Sum('total'))
         return total['cart_total']
 
@@ -79,6 +80,8 @@ class Order(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Создан')
     products = models.ManyToManyField('webapp.Product', related_name='orders', verbose_name='Товары',
                                       through='webapp.OrderProduct', through_fields=['order', 'product'])
+    user = models.ForeignKey(User, related_name='orders', on_delete=models.CASCADE, blank=True, null=True,
+                             verbose_name='Пользователь')
 
     def __str__(self):
         return f'{self.name} - {self.phone} - {self.format_time()}'
